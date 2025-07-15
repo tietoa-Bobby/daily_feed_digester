@@ -15,10 +15,10 @@ def load_config(config_path):
         if os.path.exists(example_path):
             with open(example_path, 'r') as src, open(config_path, 'w') as dst:
                 dst.write(src.read())
-            print(f"[Daily Feed Digestor] '{config_path}' not found. Created from '{example_path}'. Please edit it with your details and run again.")
+            print(f"[Daily Feed Digester] '{config_path}' not found. Created from '{example_path}'. Please edit it with your details and run again.")
             sys.exit(1)
         else:
-            print(f"[Daily Feed Digestor] '{config_path}' not found and no example config available. Please create it manually.")
+            print(f"[Daily Feed Digester] '{config_path}' not found and no example config available. Please create it manually.")
             sys.exit(1)
     with open(config_path, 'r') as f:
         return yaml.safe_load(f)
@@ -31,7 +31,7 @@ def run_digest(config):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Daily Feed Digestor")
+    parser = argparse.ArgumentParser(description="Daily Feed Digester")
     parser.add_argument('--config', type=str, default='config.yaml', help='Path to config file')
     parser.add_argument('--run-now', action='store_true', help='Run the digest immediately and exit')
     args = parser.parse_args()
@@ -50,13 +50,13 @@ def main():
     scheduler.add_job(lambda: run_digest(config), 'cron', hour=hour, minute=minute)
     scheduler.start()
 
-    print(f"[Daily Feed Digestor] Scheduled digest at {hour:02d}:{minute:02d} {timezone}. Press Ctrl+C to exit.")
+    print(f"[Daily Feed Digester] Scheduled digest at {hour:02d}:{minute:02d} {timezone}. Press Ctrl+C to exit.")
     try:
         while True:
             pass
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown()
-        print("\n[Daily Feed Digestor] Exiting.")
+        print("\n[Daily Feed Digester] Exiting.")
 
 
 if __name__ == "__main__":

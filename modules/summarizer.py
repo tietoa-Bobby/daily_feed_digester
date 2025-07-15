@@ -1,9 +1,9 @@
-# Summarizer for Daily Feed Digestor
+# Summarizer for Daily Feed Digester
 from collections import defaultdict
 
 
 def summarise_posts(posts):
-    """Group posts by source, number, and format as Markdown. Show errors separately. UK English."""
+    """Group posts by source, number, and format as Markdown. Show errors separately. UK English. For Daily Feed Digester."""
     grouped = defaultdict(list)
     errors = []
     for p in posts:
@@ -25,7 +25,7 @@ def summarise_posts(posts):
 
     lines = []
     # Only add the heading if not already present
-    heading = "# Daily Feed Digest"
+    heading = "# Daily Feed Digester"
     lines.append(heading + "\n")
     for section in ['Reddit', 'Hacker News'] + [k for k in grouped if k.startswith('RSS:')]:
         if section in grouped:

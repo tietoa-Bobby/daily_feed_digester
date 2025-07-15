@@ -1,4 +1,4 @@
-# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimised / DLL files
 __pycache__/
 *.py[cod]
 
@@ -10,4 +10,7 @@ venv/
 
 # Local config and output
 config.yaml
-daily_digest.md 
+daily_digest.md
+
+# Old entry point
+main.py 

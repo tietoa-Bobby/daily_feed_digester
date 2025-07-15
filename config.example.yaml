@@ -1,9 +1,9 @@
-# Example configuration for Daily Feed Digestor
+# Example configuration for Daily Feed Digester
 
 reddit:
   client_id: "your_client_id"  # Get from https://www.reddit.com/prefs/apps
   client_secret: "your_client_secret"
-  user_agent: "daily_feed_digestor by /u/yourusername"
+  user_agent: "daily_feed_digester by /u/yourusername"
   subreddits:
     - technology
     - technews

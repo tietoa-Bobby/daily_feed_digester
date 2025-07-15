@@ -1,8 +1,8 @@
-# Daily Feed Digestor
+# Daily Feed Digester
 
 [![MIT Licence](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)
-[![GitHub Repo](https://img.shields.io/badge/GitHub-tietoa--Bobby%2Fdaily__feed__digestor-blue?logo=github)](https://github.com/tietoa-Bobby/daily_feed_digestor)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-tietoa--Bobby%2Fdaily__feed__digester-blue?logo=github)](https://github.com/tietoa-Bobby/daily_feed_digester)
 
 A Python tool that aggregates top daily tech news from Reddit, Hacker News, and tech RSS feeds, summarises them, and delivers a daily digest via command line and Markdown file. Highly configurable, cross-platform, and easy to use.
 

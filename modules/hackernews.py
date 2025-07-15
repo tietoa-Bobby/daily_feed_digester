@@ -6,7 +6,7 @@ HACKERNEWS_ITEM_URL = 'https://hacker-news.firebaseio.com/v0/item/{}.json'
 
 
 def fetch_hackernews_posts(cfg):
-    """Fetch top posts from Hacker News using the official API."""
+    """Fetch top posts from Hacker News using the official API for Daily Feed Digester."""
     post_limit = cfg.get('post_limit', 5)
     try:
         top_ids = requests.get(HACKERNEWS_TOP_URL, timeout=10).json()

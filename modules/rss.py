@@ -3,7 +3,7 @@ import feedparser
 
 
 def fetch_rss_posts(cfg):
-    """Fetch top posts from configured RSS feeds using feedparser."""
+    """Fetch top posts from configured RSS feeds using feedparser for Daily Feed Digester."""
     feeds = cfg.get('feeds', [])
     post_limit = cfg.get('post_limit', 5)
     posts = []

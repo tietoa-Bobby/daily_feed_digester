@@ -3,10 +3,10 @@ import praw
 
 
 def fetch_reddit_posts(cfg):
-    """Fetch top posts from configured subreddits using PRAW."""
+    """Fetch top posts from configured subreddits using PRAW for Daily Feed Digester."""
     client_id = cfg.get('client_id')
     client_secret = cfg.get('client_secret')
-    user_agent = cfg.get('user_agent', 'daily_feed_digestor')
+    user_agent = cfg.get('user_agent', 'daily_feed_digester')
     subreddits = cfg.get('subreddits', [])
     post_limit = cfg.get('post_limit', 5)
     if not (client_id and client_secret and user_agent and subreddits):
