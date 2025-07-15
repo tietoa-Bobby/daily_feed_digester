@@ -1,0 +1,48 @@
+# Example configuration for Daily Feed Digestor
+
+reddit:
+  client_id: "your_client_id"  # Get from https://www.reddit.com/prefs/apps
+  client_secret: "your_client_secret"
+  user_agent: "daily_feed_digestor by /u/yourusername"
+  subreddits:
+    - technology
+    - technews
+    - programming
+    - gadgets
+    - Futurology
+    - MachineLearning
+    - DataIsBeautiful
+    - Artificial
+    - computervision
+    - cybersecurity
+  post_limit: 5
+
+hackernews:
+  post_limit: 5
+
+rss:
+  feeds:
+    - https://feeds.arstechnica.com/arstechnica/technology-lab
+    - https://www.theverge.com/rss/index.xml
+    - https://rss.nytimes.com/services/xml/rss/nyt/Technology.xml
+    - https://www.wired.com/feed/rss
+    - https://www.engadget.com/rss.xml
+    - https://feeds.feedburner.com/TechCrunch/
+    - https://www.zdnet.com/news/rss.xml
+    - https://www.cnet.com/rss/news/
+    - https://www.bbc.co.uk/news/technology/rss.xml
+    - https://www.technologyreview.com/feed/
+    - https://www.makeuseof.com/feed/
+    - https://www.infoq.com/feed/
+    - https://feeds.feedburner.com/oreilly/radar/atom
+  post_limit: 5
+
+schedule:
+  hour: 8      # Hour of day to run (24h format)
+  minute: 0    # Minute of hour to run
+  timezone: "Europe/London"  # See pytz for valid timezones
+
+notification:
+  enable_cli_output: true
+  save_markdown: true
+  markdown_path: daily_digest.md 

@@ -1,0 +1,6 @@
+praw
+feedparser
+requests
+APScheduler
+PyYAML
+rich 
