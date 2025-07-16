@@ -33,13 +33,13 @@ A Python tool that aggregates top daily tech news from Reddit, Hacker News, and 
 ## Usage
 Run manually:
 ```bash
-python main.py --config config.yaml
+python daily_feed_digester.py --config config.yaml
 ```
 
 ### Immediate Test Run
 To run the digest immediately (for testing), use:
 ```bash
-python main.py --config config.yaml --run-now
+python daily_feed_digester.py --config config.yaml --run-now
 ```
 
 ## Configuration
@@ -65,7 +65,7 @@ notification:
 
 ## Scheduling
 - Uses APScheduler to run daily at the configured time.
-- To run at system startup or on a schedule outside Python, use your OS's task scheduler to call `python main.py --config config.yaml --run-now`.
+- To run at system startup or on a schedule outside Python, use your OS's task scheduler to call `python daily_feed_digester.py --config config.yaml --run-now`.
 
 ## Licence
 MIT 
